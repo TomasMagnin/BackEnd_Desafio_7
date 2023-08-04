@@ -1,4 +1,4 @@
-import { UserModel } from "../DAO/models/users.model.js";
+import { ProductModel } from '../DAO/models/products.model.js';
 import { ProductService } from '../services/products.service.js';
 import { CartService } from '../services/carts.service.js';
 

@@ -7,7 +7,7 @@ import path from "path";
 import { productsRouter } from "./routes/products.router.js";     // Importamos los endpoint Productos.
 import { cartsRouter } from "./routes/carts.router.js";           // Importamos los endpoint Carts.
 import { viewsRouter } from "./routes/views.router.js";
-import { chatRouter } from "./routes/chat.router.js"
+import { chatsRouter } from "./routes/chats.router.js"
 import { authRouter } from "./routes/auth.router.js";
 import { sessionsRouter } from "./routes/sessions.router.js";
 import MongoStore from "connect-mongo";
@@ -57,7 +57,7 @@ app.set("view engine", "handlebars");               // Indicamos que el motor qu
 app.use("/api/products", productsRouter);                       // Le decimos a la app, que use todo lo que esta en la ruta api/products, lo maneja productsRouter.
 app.use("/api/carts", cartsRouter);                             // Le decimos a la app, que use todo lo que esta en la ruta api/carts, lo maneja cartsRouter.
 app.use("/", viewsRouter);
-app.use("/chat", chatRouter);
+app.use("/chat", chatsRouter);
 app.use("/auth", authRouter);
 app.use("api/sessions", sessionsRouter);
 

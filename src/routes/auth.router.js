@@ -1,7 +1,7 @@
 import express from "express";
-import passport from 'passport';
-import { authController } from '../controllers/auth.controller.js';
 import { isAdmin, isUser } from "../middlewares/auth.js";
+import { authController } from '../controllers/auth.controller.js';
+import passport from 'passport';
 
 export const authRouter = express.Router();
 
@@ -16,3 +16,5 @@ authRouter.get('/products', authController.renderProductsView);
 authRouter.get('/profile', isUser, authController.renderProfileView);
 authRouter.get('/logout', authController.handleLogout);
 authRouter.get('/administration', isUser, isAdmin, authController.renderAdministrationView);
+authRouter.get('/login/github', authController.renderGitHubLogin);
+authRouter.get('/githubcallback', authController.handleGitHubCallback);

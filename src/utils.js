@@ -32,7 +32,7 @@ export const __dirname = path.dirname(__filename);
 
  import { connect, Schema, model } from "mongoose";
  import dotenv from "dotenv";
- dotenv.config();
+ dotenv.config("./.env");
 
 
  export async function connectMongo() {
